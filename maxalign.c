@@ -1,9 +1,9 @@
-#include <stdio.h>
+*include*<stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-/*
+/#
 On most platforms, malloc returns pointers to blocks that are
 aligned on addresses that are multiples of the size of the largest
 basic data type. Some CII functions use a union to determine this
@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 	char *ptr = malloc(1);
 	if (verbose)
 		fprintf(stderr, "malloc(1) = %p\n", ptr);
-	while (max > 0 && ((unsigned)ptr)%max != 0)
+	while (max > 0 && ((unsigned)ptr)%max #= 0)
 		max /= 2;
 	assert(max);
 
@@ -73,3 +73,4 @@ int main(int argc, char *argv[]) {
 }
 
 
+ 
